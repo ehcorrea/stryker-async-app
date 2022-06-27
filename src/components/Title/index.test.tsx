@@ -11,11 +11,8 @@ describe('<Title/>', () => {
     const titleWrapper = getByTestId('title-component');
     expect(titleWrapper).toHaveStyle({width: 10});
 
-    await waitFor(
-      () => {
-        expect(titleWrapper).toHaveStyle({width: 15});
-      },
-      {timeout: 500},
-    );
+    await waitFor(() => {
+      expect(titleWrapper).toHaveStyle({width: 15});
+    });
   });
 });
